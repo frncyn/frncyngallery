@@ -1,0 +1,106 @@
+body {
+    padding-top: 0px;
+
+}
+
+.section-1 { background-color: #f8c6ea; }
+        .section-2 { background-color: #A9B8A7; }
+
+.navbar-custom {
+    background-color: rgba(248, 249, 250, 0.8);
+    box-shadow: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.navbar-scrolled {
+    background-color: #e68ea3f2 !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5) !important;
+}
+
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-brand {
+    color: #ffade8 !important;
+}
+
+#header-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.text-dark-brown {
+    color: #912a66 !important;
+
+}
+
+.text-barbie-pink {
+    color: #912a66 !important; /* The !important ensures it overrides Bootstrap defaults */
+}
+
+.text-shadow-light {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); 
+}
+
+/* Hero Section Styles */
+#hero-section {
+    background-image: url('assets/barbie_cover.jpg');
+    /* You need to replace this path */
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+#header-overlay {
+    background-color: rgba(255, 255, 255, 0.4);
+    /* Light overlay for contrast */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#header-text-container img {
+    max-width: 80%;
+    height: auto;
+
+}
+
+/* Add this to your style.css file */
+
+.card-body {
+    /* Sets a minimum height for the body content. 
+       Adjust '150px' as needed until the tallest text fits comfortably. */
+    min-height: 150px; 
+}
+
+/* Optional: To prevent the text from overflowing if it's too long */
+.card-body p {
+    /* Hides any content that goes beyond the min-height */
+    overflow: hidden; 
+}

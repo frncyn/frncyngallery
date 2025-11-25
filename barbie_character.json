@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Anneliese",
+        "description": "The kind princess from 'The Princess and the Pauper,' who values duty but yearns for freedom and simple life.",
+        "image": "assets/anneliese.jpg"
+    },
+    {
+        "name": "Merliah",
+        "description": "A champion surfer who discovers she is half-mermaid and must save the ocean kingdom of Oceana.",
+        "image": "assets/merliah.jpg"
+    },
+    {
+        "name": "Keira",
+        "description": "The ambitious pop star twin in 'The Princess and the Popstar,' who trades places with a princess.",
+        "image": "assets/keira.jpg"
+    },
+    {
+        "name": "Genevieve",
+        "description": "One of the 12 dancing princesses, known for her love of ballet and adventure.",
+        "image": "assets/genevieve.jpg"
+    },
+    {
+        "name": "Tori",
+        "description": "The modern princess in 'The Princess and the Popstar' who trades places with a famous singer.",
+        "image": "assets/tori.jpg"
+    },
+    {
+        "name": "Liana",
+        "description": "A free-spirited peasant girl who finds a magical mirror and goes on an adventure with her best friend.",
+        "image": "assets/liana.jpg"
+    },
+    {
+        "name": "Corrine",
+        "description": "One of the three swashbuckling musketeers who dreams of joining the royal guard.",
+        "image": "assets/corrine.jpg"
+    },
+    {
+        "name": "Blair",
+        "description": "A kind girl who finds herself attending a secret academy and discovers she is a princess.",
+        "image": "assets/blair.jpg"
+    },
+    {
+        "name": "Erika",
+        "description": "A poor seamstress and singer in 'The Princess and the Pauper' who dreams of singing on stage.",
+        "image": "assets/erika.jpg"
+    },
+    {
+        "name": "Mariposa",
+        "description": "The courageous butterfly fairy who sets out to save her Queen and the Land of Flutterfield.",
+        "image": "assets/mariposa.jpg"
+    }
+]
