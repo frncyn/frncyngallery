@@ -1,10 +1,9 @@
 body {
     padding-top: 0px;
-
 }
 
 .section-1 { background-color: #f8c6ea; }
-        .section-2 { background-color: #A9B8A7; }
+.section-2 { background-color: #A9B8A7; }
 
 .navbar-custom {
     background-color: rgba(248, 249, 250, 0.8);
@@ -23,16 +22,28 @@ body {
     color: #ffade8 !important;
 }
 
+#hero-section {
+    background-image: url('assets/barbie_cover.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 800px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* start from top */
+    text-align: center;
+}
+
 #header-overlay {
     position: absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: flex-start;
 }
 
 #header-text-container {
@@ -40,67 +51,135 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-}
-
-
-.text-dark-brown {
-    color: #912a66 !important;
-
-}
-
-.text-barbie-pink {
-    color: #912a66 !important; /* The !important ensures it overrides Bootstrap defaults */
-}
-
-.text-shadow-light {
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); 
-}
-
-/* Hero Section Styles */
-#hero-section {
-    background-image: url('assets/barbie_cover.jpg');
-    /* You need to replace this path */
-    background-size: cover;
-    background-position: center;
-    min-height: 500px;
-    /* Adjust height as needed */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-}
-
-#header-overlay {
-    background-color: rgba(255, 255, 255, 0.4);
-    /* Light overlay for contrast */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    padding-top: 200px; /* adjust to move logo lower */
+    width: 90%;
 }
 
 #header-text-container img {
-    max-width: 80%;
+    max-width: 400px;
+    width: 80%;
     height: auto;
-
 }
 
-/* Add this to your style.css file */
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    #header-text-container {
+        padding-top: 100px;
+    }
 
+    #header-text-container img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    #header-text-container {
+        padding-top: 80px;
+    }
+
+    #header-text-container img {
+        max-width: 250px;
+    }
+}
+
+.text-dark-brown {
+    color: #912a66 !important;
+}
+
+/* Barbie Pink Color */
+.text-barbie-pink {
+    color: #ff4fa3 !important;
+}
+
+.text-shadow-light {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Card Body Height Fix */
 .card-body {
-    /* Sets a minimum height for the body content. 
-       Adjust '150px' as needed until the tallest text fits comfortably. */
-    min-height: 150px; 
+    min-height: 150px;
 }
 
-/* Optional: To prevent the text from overflowing if it's too long */
 .card-body p {
-    /* Hides any content that goes beyond the min-height */
-    overflow: hidden; 
+    overflow: hidden;
+}
+
+
+.card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #ffe3f4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    position: relative;
+}
+
+.card img {
+    border-bottom: 4px solid #ff7abb;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Glow + Lift + Tilt */
+.card:hover {
+    transform: translateY(-8px) rotateY(5deg) rotateX(2deg);
+    box-shadow: 0 15px 30px rgba(255, 105, 180, 0.35);
+}
+
+.card:hover img {
+    transform: scale(1.08);
+}
+
+/* Fade-in & slide-up animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glossy shine effect on hover */
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.4), rgba(255,255,255,0));
+    transform: skewX(-25deg);
+    transition: all 0.7s ease;
+    pointer-events: none;
+}
+
+.card:hover::after {
+    left: 125%;
+}
+
+/* ---------------------- */
+/* BARBIE POSTER HOVER    */
+/* ---------------------- */
+.gallery-item {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-item img {
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 15px 30px rgba(255, 105, 180, 0.4);
+}
+
+.gallery-item:hover::after {
+    left: 125%;
 }
