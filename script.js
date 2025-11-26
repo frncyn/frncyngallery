@@ -1,19 +1,15 @@
 function loadCharacters() {
-    // 1. Fetch the data from the JSON file
     fetch('barbie_character.json')
         .then(response => {
             if (!response.ok) {
-                // Throw an error if the HTTP status is not 200 (e.g., 404 Not Found)
                 throw new Error('HTTP status: ' + response.statusText);
             }
             return response.json();
         })
         .then(characters => {
-            // 2. Identify the target element
             const containerRow = document.getElementById("row1"); 
-            containerRow.innerHTML = ''; // Clear any existing content
+            containerRow.innerHTML = ''; 
 
-            // 3. Loop through the array and generate the HTML card for each character
            characters.forEach((character, index) => {
     const imagePath = character.image;
 
@@ -34,9 +30,7 @@ function loadCharacters() {
 
         })
         .catch(error => {
-            // This catches network errors OR JSON parsing errors (from the "return response.json()")
             console.error('Error loading characters:', error);
-            // Display custom error on the page
             const containerRow = document.getElementById("row1");
             if (containerRow) {
                 containerRow.innerHTML = '<div class="col-12 text-center text-danger py-4">Failed to load character data. </div>';
@@ -44,5 +38,4 @@ function loadCharacters() {
         });
 }
 
-// Execute the function to start loading the characters
 loadCharacters();

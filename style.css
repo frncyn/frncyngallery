@@ -30,7 +30,7 @@ body {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* start from top */
+    align-items: flex-start; 
     text-align: center;
 }
 
@@ -51,7 +51,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-top: 200px; /* adjust to move logo lower */
+    padding-top: 200px;
     width: 90%;
 }
 
@@ -59,9 +59,22 @@ body {
     max-width: 400px;
     width: 80%;
     height: auto;
+    animation: floatLogo 2s ease-in-out infinite;
 }
 
-/* Media Queries for responsiveness */
+@keyframes floatLogo {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
 @media (max-width: 768px) {
     #header-text-container {
         padding-top: 100px;
@@ -86,7 +99,6 @@ body {
     color: #912a66 !important;
 }
 
-/* Barbie Pink Color */
 .text-barbie-pink {
     color: #ff4fa3 !important;
 }
@@ -95,7 +107,6 @@ body {
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
-/* Card Body Height Fix */
 .card-body {
     min-height: 150px;
 }
@@ -103,7 +114,6 @@ body {
 .card-body p {
     overflow: hidden;
 }
-
 
 .card {
     border: none;
@@ -121,7 +131,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* Hover Glow + Lift + Tilt */
 .card:hover {
     transform: translateY(-8px) rotateY(5deg) rotateX(2deg);
     box-shadow: 0 15px 30px rgba(255, 105, 180, 0.35);
@@ -131,7 +140,6 @@ body {
     transform: scale(1.08);
 }
 
-/* Fade-in & slide-up animation */
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -143,7 +151,6 @@ body {
     }
 }
 
-/* Glossy shine effect on hover */
 .card::after {
     content: '';
     position: absolute;
@@ -161,9 +168,6 @@ body {
     left: 125%;
 }
 
-/* ---------------------- */
-/* BARBIE POSTER HOVER    */
-/* ---------------------- */
 .gallery-item {
     position: relative;
     display: inline-block;
@@ -183,3 +187,5 @@ body {
 .gallery-item:hover::after {
     left: 125%;
 }
+
+
